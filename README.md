@@ -39,7 +39,7 @@ The Customer Churn Prediction App is an end-to-end data science project that pre
 - **Programming Language**: Python
 - **Libraries**: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Streamlit
 - **Machine Learning Techniques**: Hyperparameter tuning, pipeline automation
-- **Deployment**: Streamlit
+- **Deployment**: Streamlit [App Link](https://customerchurn-predic.streamlit.app/)
 
 ---
 

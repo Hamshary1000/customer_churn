@@ -41,7 +41,7 @@ with tab2:
         <iframe 
             title="Customer Churn Dashboard" 
             width="100%" 
-            height="500" 
+            height="460" 
             src="https://app.powerbi.com/view?r=eyJrIjoiZmEwMDBmZDctYTU2Yy00OWUxLTk0ZDktMWEyZmUxMjU5MTNjIiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9" 
             frameborder="0" 
             style="border:none; overflow:hidden;" 

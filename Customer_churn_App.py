@@ -35,12 +35,19 @@ with tab1:
 # Tab 2: Dashboard
 # ---------------------
 with tab2:
-    st.title("📈 Churn Analytics Dashboard")    
-    st.components.v1.iframe(
-        src="https://app.powerbi.com/view?r=eyJrIjoiZmEwMDBmZDctYTU2Yy00OWUxLTk0ZDktMWEyZmUxMjU5MTNjIiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9",
-        height=740,
-        width=1300
-    )
+    st.title("📈 Churn Analytics Dashboard")
+
+    st.markdown("""
+        <iframe 
+            title="Customer Churn Dashboard" 
+            width="100%" 
+            height="740" 
+            src="https://app.powerbi.com/view?r=eyJrIjoiZmEwMDBmZDctYTU2Yy00OWUxLTk0ZDktMWEyZmUxMjU5MTNjIiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9" 
+            frameborder="0" 
+            allowFullScreen="true">
+        </iframe>
+    """, unsafe_allow_html=True)
+
 
 # ---------------------
 # Tab 3: Prediction

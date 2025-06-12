@@ -58,17 +58,23 @@ with tab3:
     st.title("🔍 Predict Customer Churn")
     st.markdown("Fill in the customer's details below:")
 
-    # Input fields
-    CreditScore = st.number_input('Credit Score')
-    Geography = st.radio('Country', ['Germany', 'Spain', 'France'])
-    Age = st.slider('Age', 18, 62)
-    Tenure = st.number_input('Tenure')
-    Balance = st.number_input('Balance')
-    NumOfProducts = st.number_input('No. of Products')
-    HasCrCard = st.selectbox('Credit Card', ['Yes', 'No'])
-    IsActiveMember = st.selectbox('Active Member', ['Yes', 'No'])
-    EstimatedSalary = st.number_input('Estimated Salary')
-    Gender = st.selectbox('Gender', ['Male', 'Female'])
+    col1, col2 = st.columns(2)
+
+    with col1:
+        CreditScore = st.number_input('Credit Score')
+        Geography = st.radio('Country', ['Germany', 'Spain', 'France'])
+        Age = st.slider('Age', 18, 62)
+        Tenure = st.number_input('Tenure')
+        Balance = st.number_input('Balance')
+
+    with col2:
+        NumOfProducts = st.number_input('No. of Products')
+        HasCrCard = st.selectbox('Credit Card', ['Yes', 'No'])
+        IsActiveMember = st.selectbox('Active Member', ['Yes', 'No'])
+        EstimatedSalary = st.number_input('Estimated Salary')
+        Gender = st.selectbox('Gender', ['Male', 'Female'])
+
+    st.markdown("")
 
     if st.button("Submit"):
         try:
@@ -105,6 +111,7 @@ with tab3:
                 st.success("✅ The customer is **not likely to churn**.")
         except Exception as e:
             st.error(f"⚠️ An error occurred during prediction: {e}")
+
 
         
 

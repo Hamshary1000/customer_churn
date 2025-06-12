@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 
 # Set page configuration
-st.set_page_config(page_title="Customer Churn App", layout="wide", page_icon="📊")
+#st.set_page_config(page_title="Customer Churn App", layout="wide", page_icon="📊")
 
 # Create tabs
 tab1, tab2, tab3 = st.tabs(["📋 Overview", "📈 Dashboard", "🔍 Prediction"])
@@ -35,14 +35,11 @@ with tab1:
 # Tab 2: Dashboard
 # ---------------------
 with tab2:
-    st.title("📈 Churn Analytics Dashboard")
-    st.markdown("This interactive dashboard provides insights into customer churn data.")
-    st.markdown("[🔗 View Full Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZmEwMDBmZDctYTU2Yy00OWUxLTk0ZDktMWEyZmUxMjU5MTNjIiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9)")
-    
+    st.title("📈 Churn Analytics Dashboard")    
     st.components.v1.iframe(
         src="https://app.powerbi.com/view?r=eyJrIjoiZmEwMDBmZDctYTU2Yy00OWUxLTk0ZDktMWEyZmUxMjU5MTNjIiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9",
-        height=600,
-        width=1000
+        height=740,
+        width=1300
     )
 
 # ---------------------

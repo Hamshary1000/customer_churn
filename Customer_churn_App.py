@@ -35,7 +35,7 @@ with tab1:
 # Tab 2: Dashboard
 # ---------------------
 with tab2:
-    st.title("📈 Churn Analytics Dashboard")
+    st.header("📈 Churn Analytics Dashboard")
 
     st.markdown("""
         <iframe 

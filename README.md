@@ -1,74 +1,145 @@
-# Customer Churn Prediction App
+# 🏦 Sid Bank - Customer Churn Prediction App
 
-## Overview
-The Customer Churn Prediction App is an end-to-end data science project that predicts customer churn (likelihood of discontinuing a service) using a robust machine learning pipeline. This app is designed to help businesses take proactive steps to retain customers by identifying high-risk groups and providing actionable insights.
-
----
-
-## Project Workflow
-
-1. **Importing Libraries**: Essential libraries like Pandas, NumPy, Matplotlib, Scikit-learn, and Streamlit are utilized.
-2. **Loading the Dataset**: The customer churn dataset is loaded and inspected for completeness.
-3. **Data Exploration**:
-   - **Univariate Analysis**: Analysis of individual features to understand distributions and anomalies.
-   - **Bivariate Analysis**: Examining relationships between features and the target variable.
-   - **Multivariate Analysis**: Exploring interactions among multiple features.
-4. **Data Cleaning**:
-   - Handling missing values.
-   - Removing duplicates.
-   - Addressing outliers.
-5. **Feature Engineering**:
-   - **Scaling**: Standardization or normalization of numerical features.
-   - **Encoding**: Transforming categorical variables using techniques like one-hot encoding.
-6. **Data Splitting**: Splitting the dataset into training and testing sets.
-7. **Pipeline Building**: Creating a machine learning pipeline to automate preprocessing and modeling.
-8. **Hyperparameter Tuning**: Using Grid Search to find the best model parameters.
-9. **Model Evaluation**: Evaluating the model using metrics such as accuracy, precision, recall, and F1-score.
-10. **Deployment**: Developing a Streamlit app for user interaction and deploying the model.
+An interactive machine learning app designed to help **Sid Bank** identify and prevent customer churn. It provides business users with actionable insights and a predictive tool to improve retention.
 
 ---
 
-## Features
-1. **End-to-End Workflow**: Covers all stages of a data science project.
-2. **Interactive App**: A user-friendly interface built with Streamlit for exploring predictions.
-3. **Data Insights**: Provides detailed insights into customer behavior and churn drivers.
+## 📚 Table of Contents
+
+1. [📌 Problem Overview](#-problem-overview)  
+2. [🎯 Project Goals](#-project-goals)  
+3. [📂 Dataset Description](#-dataset-description)  
+4. [🖥️ App Pages](#-app-pages)  
+   - [1️⃣ Overview Page](#1️⃣-overview-page)  
+   - [2️⃣ Dashboard Page](#2️⃣-dashboard-page)  
+     - [📍 Sub-Page 1: Churn Summary](#-sub-page-1-churn-summary)  
+     - [📍 Sub-Page 2: Feature Impact](#-sub-page-2-feature-impact)  
+     - [🔍 Insights](#-insights)  
+     - [💡 Recommendations](#-recommendations)  
+   - [3️⃣ Prediction Page](#3️⃣-prediction-page)  
+     - [⚙️ Model Building Process](#️-model-building-process)  
+     - [🧠 Techniques Used](#-techniques-used)  
+     - [📈 Model Accuracy](#-model-accuracy)  
+5. [🚀 How to Run the App Locally](#-how-to-run-the-app-locally)  
+6. [🌍 Live Application](#-live-application)  
+7. [📫 Contact](#-contact)
 
 ---
 
-## Technology Stack
-- **Programming Language**: Python
-- **Libraries**: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Streamlit
-- **Machine Learning Techniques**: Hyperparameter tuning, pipeline automation
-- **Deployment**: Streamlit [App Link](https://customerchurn-predic.streamlit.app/)
+## 📌 Problem Overview
+
+Churn prediction is crucial for **Sid Bank**, where retaining customers is more cost-effective than acquiring new ones. This app identifies at-risk customers and empowers the business to take proactive actions.
 
 ---
 
-## Dataset
-The dataset includes the following columns:
+## 🎯 Project Goals
 
-- **RowNumber**: Index of the customer in the dataset
-- **CustomerId**: Unique identifier for the customer
-- **Surname**: Customer's surname
-- **CreditScore**: Customer's credit score
-- **Geography**: Country of residence
-- **Gender**: Customer's gender
-- **Age**: Customer's age
-- **Tenure**: Number of years the customer has been with the company
-- **Balance**: Customer's account balance
-- **NumOfProducts**: Number of products the customer has subscribed to
-- **HasCrCard**: Whether the customer owns a credit card (1: Yes, 0: No)
-- **IsActiveMember**: Whether the customer is an active member (1: Yes, 0: No)
-- **EstimatedSalary**: Estimated salary of the customer
-- **Exited**: Target variable indicating whether the customer churned (1: Yes, 0: No)
+- Predict customer churn using machine learning.
+- Provide interpretable insights via dashboards.
+- Help Sid Bank take strategic actions to improve retention.
 
 ---
 
-## Key Insights from the Project
-1. **High-Risk Groups**: Customers with low credit scores, short tenures, and multiple products are more likely to churn.
-2. **Impact of Geography**: Customers from certain regions exhibit higher churn rates.
-3. **Model Performance**: Achieved an accuracy of 85% with hyperparameter-tuned models.
+## 📂 Dataset Description
+
+| Column Name         | Description |
+|---------------------|-------------|
+| `RowNumber`         | Row index of the customer |
+| `CustomerId`        | Unique customer ID |
+| `Surname`           | Customer’s last name |
+| `CreditScore`       | Customer’s credit score |
+| `Geography`         | Country of residence |
+| `Gender`            | Male or Female |
+| `Age`               | Age of the customer |
+| `Tenure`            | Years with Sid Bank |
+| `Balance`           | Account balance |
+| `NumOfProducts`     | Number of bank products used |
+| `HasCrCard`         | Has a credit card (1 = Yes, 0 = No) |
+| `IsActiveMember`    | Active customer (1 = Yes, 0 = No) |
+| `EstimatedSalary`   | Estimated yearly salary |
+| `Exited`            | Target variable (1 = Churned, 0 = Not)
 
 ---
+
+## 🖥️ App Pages
+
+### 1️⃣ [Overview Page](https://customerchurn-predic.streamlit.app/Overview)
+
+A summary page introducing:
+
+- What churn is
+- Why it's important for Sid Bank
+- The app’s purpose and how to use it
+
+---
+
+### 2️⃣ [Dashboard Page](https://customerchurn-predic.streamlit.app/Dashboard)
+
+This section provides **interactive visualizations** and is divided into two internal tabs:
+
+#### 📍 [Sub-Page 1: Churn Summary](https://customerchurn-predic.streamlit.app/Dashboard#churn-summary)
+
+- Overall churn rate
+- Churn by geography, gender, tenure
+- Bar charts, pie charts, and filters
+
+#### 📍 [Sub-Page 2: Feature Impact](https://customerchurn-predic.streamlit.app/Dashboard#feature-impact)
+
+- Relationship between churn and:
+  - Credit score
+  - Age
+  - Number of products
+  - Balance and active membership
+- Correlation heatmap
+
+#### 🔍 Insights
+
+- **Low credit scores**, **short tenures**, and **multiple products** increase churn risk.
+- **Inactive members** churn more frequently.
+- **Geography matters**: Germany shows the highest churn rate.
+- Customers aged **35–50** show the highest churn trends.
+
+#### 💡 Recommendations
+
+- Target **low-tenure** customers with loyalty benefits.
+- Promote **product bundling** to reduce churn.
+- Implement **personalized outreach** to inactive members.
+- Focus retention efforts on **German customers**.
+- Offer onboarding programs to improve early-year retention.
+
+---
+
+### 3️⃣ [Prediction Page](https://customerchurn-predic.streamlit.app/Prediction)
+
+Allows you to enter customer details and get a real-time churn prediction.
+
+#### ⚙️ Model Building Process
+
+1. Data cleaned (nulls, outliers, duplicates removed)
+2. Features encoded and scaled
+3. Data split into training and test sets
+4. Built ML pipeline with preprocessing + modeling
+5. Hyperparameter tuning via GridSearchCV
+
+#### 🧠 Techniques Used
+
+- Algorithms tested: Logistic Regression, Random Forest, XGBoost
+- Best model: **XGBoost**
+- Feature engineering: One-hot encoding, standardization
+- Evaluation metrics: Accuracy, Precision, Recall, F1
+
+#### 📈 Model Accuracy
+
+| Metric        | Value |
+|---------------|-------|
+| Accuracy      | 85%   |
+| Precision     | 83%   |
+| Recall        | 81%   |
+| F1 Score      | 82%   |
+
+
+
+
 
 
 

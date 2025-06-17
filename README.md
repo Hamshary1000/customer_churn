@@ -92,13 +92,16 @@ The dashboard provides analytical visualizations and is divided into two interna
 - Churn by **gender**, **country**, and **credit card ownership**
 - Customer distribution by **tenure**, **products**, and **age**
 
-![Demographic Page](https://drive.google.com/uc?export=view&id=1LSNZZ5aa1gV_vvkKb0a_rRQ7RtsMZ378)
+![Demographic Page](assets/1.jpg)
 
 #### 📈 [Overall Analysis](https://customerchurn-predic.streamlit.app/Dashboard#Overall-Analysis)
 
 - Summary of churned vs retained customers  
 - Overall demographic trends and product usage  
 - Visualization of churn percentages and customer behavior patterns
+
+![Overall Page](assets/2.jpg)
+
 
 ---
 
